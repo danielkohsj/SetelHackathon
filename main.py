@@ -20,7 +20,6 @@ app.secret_key = os.getenv("SECRET_KEY", "your_secret_key")  # Set a secret key 
 socketio = SocketIO(app, ping_interval=25, ping_timeout=70, cors_allowed_origins="*", engineio_logger=True, logger=True, max_http_buffer_size=15000000)  # max limit 85 secs
 
 
-
 @app.route('/')
 def index():
     """
