@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>5elesai</title>
-    <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/pure-min.css">
+    <!-- <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/pure-min.css"> -->
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,6 +21,34 @@
 <div style="padding: 20px; text-align: center;">
     <p style="font-size: 18px;">Welcome to a basic "Hello World" layout!</p>
 </div>
+
+
+<div class="center-container">
+    <div class="dropdown">
+        <button class="dropbtn" id="vehicle-type">Vehicle Type</button>
+        <div class="dropdown-content">
+            <button class="dropdown-item" data-type="Sedan">Sedan</button>
+            <button class="dropdown-item" data-type="Motorcycle">Motorcycle</button>
+            <button class="dropdown-item" data-type="Hatchback">Hatchback</button>
+            <button class="dropdown-item" data-type="Heavy Duty Vehicles">Heavy Duty Vehicles</button>
+            <button class="dropdown-item" data-type="SUV">SUV</button>
+        </div>
+    </div>
+
+
+    <div class="textbox">
+        <input type="text" id="start-location" placeholder="Enter a Starting Location">
+        <button id="send-start-location">Enter</button>
+        <input type="text" id="end-location" placeholder="Enter a Destination">
+        <button id="send-end-location">Enter</button>
+        <button id="current-loc-button">Current Location</button>
+    </div>
+</div>
+
+
+<div class="current_loc"></div>
+
+<div class="final_dest"></div>
 
 <script src="https://cdn.socket.io/4.8.1/socket.io.min.js"></script> <!-- Add Socket.IO client library -->
 <script src="{{ url_for('static', filename='scripts.js') }}"></script> <!-- Link to the external JavaScript file -->

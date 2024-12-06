@@ -46,6 +46,28 @@ def handle_connect():
 def handle_disconnect():
     print(f"Client disconnected: {request.sid}")
 
+@socketio.on('vehicleTypeSelected')
+def handle_vehicle_type(data: str):
+    print(f"Vehicle Type Selected: {data}")
+    # emit('vehicleTypeSelected', data, broadcast=True)
+
+    # TODO: handle vehicle type and send response to client
+
+
+@socketio.on('startLocation')
+def handle_start_location(data: str):
+    print(f"Start Location: {data}")
+    # emit('currentLocation', data, broadcast=True)
+
+    # TODO: handle current location and send response to client
+
+
+@socketio.on('endLocation')
+def handle_end_location(data: str):
+    print(f"End Location: {data}")
+    # emit('endLocation', data, broadcast=True)
+
+    # TODO: handle end location and send response to client
 
 
 

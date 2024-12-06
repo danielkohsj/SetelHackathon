@@ -26,6 +26,43 @@ function initializeWebSocket() {
     });
 }
 
+// Get all dropdown item buttons
+document.querySelectorAll('.dropdown-item').forEach(button => {
+    button.addEventListener('click', (event) => {
+        // Get the vehicle type from the data attribute
+        const vehicleType = event.target.getAttribute('data-type');
+        
+        // Handle the selected vehicle type (example: send to server, update UI)
+        console.log(`Selected vehicle type: ${vehicleType}`);
+        socket.emit('vehicleTypeSelected', vehicleType);
+    });
+});
+
+document.getElementById('current-loc-button').addEventListener('click', () => {
+    // Get the current location of the user
+    navigator.geolocation.getCurrentPosition((position) => {
+        const { latitude, longitude } = position.coords;
+        console.log(`Current location: ${latitude}, ${longitude}`);
+
+        socket.emit('startLocation', `${latitude}, ${longitude}`);
+    }, (error) => {
+        console.error("Error getting current location:", error);
+    });
+});
+
+document.getElementById('send-start-location').addEventListener('click', () => {
+    const startLocation = document.getElementById('start-location').value;
+    console.log(`Start location: ${startLocation}`);
+    socket.emit('startLocation', startLocation);
+});
+
+document.getElementById('send-end-location').addEventListener('click', () => {
+    const endLocation = document.getElementById('end-location').value;
+    console.log(`End location: ${endLocation}`);
+    socket.emit('endLocation', endLocation);
+});
+
+
 // Initialize WebSocket on page load
 window.addEventListener('load', () => {
     initializeWebSocket();
