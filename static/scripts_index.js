@@ -26,7 +26,6 @@ function initializeWebSocket() {
     });
 }
 
-
 document.getElementById("publicTransportButton").addEventListener("click", () => {
     console.log("Navigating to transport page");
     window.location.href = "/transport"; 
@@ -34,7 +33,7 @@ document.getElementById("publicTransportButton").addEventListener("click", () =>
 
 document.getElementById("homeButton").addEventListener("click", () => {
     console.log("Navigating to home page");
-    window.location.href = "/index"; 
+    window.location.href = "/"; 
 });
 
 

@@ -53,12 +53,13 @@
     background-color: #3e8e41;
 }
 
+
 .navigation {
   position: fixed; /* Fixes the navigation to the left */
   top: 0; /* Stays at the top of the page */
   left: 0; /* Aligns the navigation to the left */
   bottom: 0; /* Stretches it to the bottom of the page */
-  width: 180px; /* Reduced width for the sidebar */
+  width: 160px; /* Reduced width for the sidebar */
   background-color: #fff; /* Background color of the sidebar */
   box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Optional: Adds shadow to the sidebar */
   z-index: 1000; /* Keeps the sidebar on top of other elements */
@@ -95,11 +96,16 @@
 }
 
 .container--0- {
-  display: flex;
-  flex-direction: row; /* Arrange items horizontally */
-  align-items: center; /* Vertically center items */
+  display: flex; /* Horizontal layout */
+  flex-direction: row; /* Ensures icon and text are side-by-side */
+  align-items: center; /* Centers icon and text vertically */
+  gap: 8px; /* Adds space between icon and text */
 }
 
-.text-1-2-2, .text-0-1-1, .text-1-2-1 {
-  margin-left: 10px; /* Adjust spacing between icon and text */
+
+.navigation-text{
+  margin-left: 15px; /* Adjust spacing between icon and text */
+  white-space: nowrap; /* Prevent text from wrapping */
+  overflow: hidden; /* Optional: Hide overflow text */
+  text-overflow: ellipsis; /* Optional: Add "..." for overflow text */
 }

@@ -31,6 +31,17 @@ def index():
 def transport():
     return render_template('transport.html')
 
+# @app.route('/routeAB')
+# def transport():
+#     return render_template('routeAB.html')
+
+# @app.route('/balance')
+# def transport():
+#     return render_template('balance.html')
+
+# @app.route('/gps')
+# def transport():
+#     return render_template('gps.html')
 
 @app.route('/chat')
 def chat():
