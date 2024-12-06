@@ -63,9 +63,14 @@ document.getElementById('send-end-location').addEventListener('click', () => {
 });
 
 document.getElementById("publicTransportButton").addEventListener("click", () => {
-    console.log("Public Transport button clicked");
-    // Redirect to transport.html when the button is clicked
-    window.location.href = "transport.html";
+    console.log("Navigating to transport page");
+    window.location.href = "/transport"; 
+});
+
+
+document.getElementById("homeButton").addEventListener("click", () => {
+    console.log("Navigating to home page");
+    window.location.href = "/"; 
 });
 
 

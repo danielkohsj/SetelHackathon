@@ -27,6 +27,10 @@ def index():
     """
     return render_template('index.html')  # Serve the HTML page
 
+@app.route('/transport')
+def transport():
+    return render_template('transport.html')
+
 
 @app.route('/chat')
 def chat():

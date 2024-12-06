@@ -22,7 +22,7 @@
     <p style="font-size: 18px;">Welcome to a basic "Hello World" layout!</p>
 </div> -->
 
-<!-- 
+
 <div class="center-container">
     <div class="dropdown">
         <button class="dropbtn" id="vehicle-type">Vehicle Type</button>
@@ -43,13 +43,13 @@
         <button id="send-end-location">Enter</button>
         <button id="current-loc-button">Current Location</button>
     </div>
-</div> -->
+</div>
 
 <nav class="navigation">
     <ul class="navigation-list">
       <!-- Home Section -->
       <li class="navigation-item">
-        <button class="navigation-link" aria-label="Home">
+        <button id="homeButton" class="navigation-link" aria-label="Home">
           <div class="container--0-">
             <div class="container-0-1-0">
               <svg
@@ -173,7 +173,7 @@
       <!-- Cafe Mesra Section -->
       <li class="navigation-item">
         <button class="navigation-link" aria-label="Cafe Mesra">
-          <div class="icon-text-container">
+          <div class="container--0-">
             <svg
               class="icon"
               width="24"
@@ -295,7 +295,7 @@
 <div class="final_dest"></div>
 
 <script src="https://cdn.socket.io/4.8.1/socket.io.min.js"></script> <!-- Add Socket.IO client library -->
-<script src="{{ url_for('static', filename='scripts.js') }}"></script> <!-- Link to the external JavaScript file -->
+<script src="{{ url_for('static', filename='scripts_index.js') }}"></script> <!-- Link to the external JavaScript file -->
 
 </body>
 </html>
