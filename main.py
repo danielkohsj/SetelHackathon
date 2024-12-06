@@ -25,7 +25,7 @@ def index():
     """
     Serve the main HTML page and reset the chat history for a new session.
     """
-    return render_template('index.html')  # Serve the HTML page
+    return render_template('transport.html')  # Serve the HTML page
 
 
 @app.route('/chat')
