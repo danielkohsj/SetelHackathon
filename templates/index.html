@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aurora</title>
+    <title>5elesai</title>
     <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/pure-min.css">
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,35 +12,14 @@
 </head>
 <body>
 
-<!-- Top bar -->
-<div class="top-bar">
-    <!-- <h1>Voice Recorder Chatbot</h1> -->
-
-    <!-- Language Selector -->
-    <div class="language-selector">
-        <select id="languageSelect" class="language-dropdown">
-            <option value="en" selected id="lang-en">EN</option>
-            <option value="ms" id="lang-ms">BM</option>
-            <option value="zh" id="lang-zh">中文</option>
-        </select>
-    </div>
+<!-- Header -->
+<div style="background-color: #f7f7f7; padding: 20px; text-align: center;">
+    <h1 style="font-family: 'Montserrat', sans-serif; margin: 0;">Hello World</h1>
 </div>
 
-<div class="body-container">
-<div class="pure-g">
-    <h1 class="pure-u-1" id="welcomeMessage" style="font-family: 'Montserrat', sans-serif;">Welcome to Aurora</h1>
-    
-    <div id="transcription" class="pure-u-1 transcription" style="font-family: 'Lato', sans-serif;"></div> <!-- To display the transcription -->
-    <div id="response" class="pure-u-1 response" style="font-family: 'Lato', sans-serif;"></div> <!-- To display the response from the LLM -->
-
-    <!-- Button container for recording -->
-    <div class="pure-u-1 button-container">
-        <button id="recordButton" class="pure-button pure-button-primary">
-            <img id="micIcon" src="{{ url_for('static', filename='globe512.gif') }}" alt="Mic Icon" class="mic-icon" data-ori-src="{{ url_for('static', filename='ToGlobeLong.gif') }}" data-clicked-src="{{ url_for('static', filename='ToInfinity.gif') }}" neutral-src="{{ url_for('static', filename='globe512.gif') }}" style="box-shadow: none !important; outline: none; background: transparent;">
-        </button>
-    </div>
-
-</div>
+<!-- Main Content -->
+<div style="padding: 20px; text-align: center;">
+    <p style="font-size: 18px;">Welcome to a basic "Hello World" layout!</p>
 </div>
 
 <script src="https://cdn.socket.io/4.8.1/socket.io.min.js"></script> <!-- Add Socket.IO client library -->
