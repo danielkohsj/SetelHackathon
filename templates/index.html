@@ -4,9 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aurora</title>
-    <link rel="icon" href="{{ url_for('static', filename='CD_logo.png') }}" type="image/x-icon">
     <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/pure-min.css">
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles_v2.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
@@ -15,7 +14,6 @@
 
 <!-- Top bar -->
 <div class="top-bar">
-    <img src="{{ url_for('static', filename='logo.svg') }}" alt="Logo">
     <!-- <h1>Voice Recorder Chatbot</h1> -->
 
     <!-- Language Selector -->
@@ -46,8 +44,7 @@
 </div>
 
 <script src="https://cdn.socket.io/4.8.1/socket.io.min.js"></script> <!-- Add Socket.IO client library -->
-<script src="https://www.WebRTC-Experiment.com/RecordRTC.js"></script> <!-- Add RecordRTC library -->
-<script src="{{ url_for('static', filename='scripts_v2.js') }}"></script> <!-- Link to the external JavaScript file -->
+<script src="{{ url_for('static', filename='scripts.js') }}"></script> <!-- Link to the external JavaScript file -->
 
 </body>
 </html>
