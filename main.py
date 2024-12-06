@@ -1,13 +1,5 @@
-from langchain.chains.combine_documents import create_stuff_documents_chain
-from langchain_openai import AzureOpenAIEmbeddings, AzureChatOpenAI
-from langchain_aws.chat_models import ChatBedrock
-from langchain.chains.retrieval import create_retrieval_chain
-from flask import Flask, render_template, session, request
-from langchain_community.vectorstores import FAISS
-from langchain.prompts import PromptTemplate
 from flask_socketio import SocketIO, emit
 # from dotenv import load_dotenv
-# from openai import AzureOpenAI
 
 import os
 import re
@@ -32,9 +24,6 @@ def index():
     """
     Serve the main HTML page and reset the chat history for a new session.
     """
-    # Reset chat history for a new session
-    session['chat_history'] = []  # Initialize empty chat history
-    session['language'] = 'en'  # Default language is English
     return render_template('index.html')  # Serve the HTML page
 
 
@@ -43,10 +32,7 @@ def chat():
     """
     can create separate layout here
     """
-    # Reset chat history for a new session
-    session['chat_history'] = []
-    session['language'] = 'en'  # Default language is English
-    return render_template('index_chat.html')  # Serve the chat UI HTML page
+    pass
 
 
 @socketio.on('connect')
