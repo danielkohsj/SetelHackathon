@@ -54,39 +54,52 @@
 }
 
 .navigation {
-    font-family: Arial, sans-serif;
-  }
-  .navigation-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-  }
-  .navigation-item {
-    display: flex;
-    align-items: center;
-  }
-  .navigation-link {
-    background: none;
-    border: none;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    text-decoration: none;
-    color: inherit;
-    cursor: pointer;
-  }
-  .icon {
-    width: 24px;
-    height: 24px;
-  }
-  .navigation-text {
-    font-size: 1rem;
-  }
-  .navigation-separator {
-    border: none;
-    border-top: 1px solid #ccc;
-    margin: 1rem 0;
-  }
+  position: fixed; /* Fixes the navigation to the left */
+  top: 0; /* Stays at the top of the page */
+  left: 0; /* Aligns the navigation to the left */
+  bottom: 0; /* Stretches it to the bottom of the page */
+  width: 250px; /* Set a width for the sidebar */
+  background-color: #fff; /* Background color of the sidebar */
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Optional: Adds shadow to the sidebar */
+  z-index: 1000; /* Keeps the sidebar on top of other elements */
+  padding: 20px; /* Adds padding for spacing inside the sidebar */
+  overflow: hidden; /* Removes the scroll bar */
+}
+
+/* Style for the navigation list */
+.navigation-list {
+  list-style-type: none; /* Removes bullet points from the list */
+  padding: 0; /* Removes padding */
+  margin: 0; /* Removes margin */
+}
+
+/* Style for each navigation item */
+.navigation-item {
+  margin-bottom: 20px; /* Adds space between items */
+}
+
+/* Style for the navigation link */
+.navigation-link {
+  display: flex; /* Ensures the icon and text align horizontally */
+  align-items: center; /* Aligns items vertically */
+  padding: 10px;
+  background: none;
+  border: none;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+}
+
+.navigation-link:hover {
+  background-color: #f1f1f1; /* Adds a hover effect */
+}
+
+/* Adjust the spacing for text and icon */
+.container--0- {
+  display: flex;
+  align-items: center; /* Ensures vertical alignment */
+}
+
+.text-1-2-2, .text-0-1-1, .text-1-2-1 {
+  margin-left: 10px; /* Adds space between the icon and text */
+}

@@ -62,6 +62,12 @@ document.getElementById('send-end-location').addEventListener('click', () => {
     socket.emit('endLocation', endLocation);
 });
 
+document.getElementById("publicTransportButton").addEventListener("click", () => {
+    console.log("Public Transport button clicked");
+    // Redirect to transport.html when the button is clicked
+    window.location.href = "transport.html";
+});
+
 
 // Initialize WebSocket on page load
 window.addEventListener('load', () => {
