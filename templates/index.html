@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>5elesai</title>
     <!-- <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/pure-min.css"> -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,40 +14,31 @@
 <body>
 
 <!-- Header -->
-<!-- <div style="background-color: #f7f7f7; padding: 20px; text-align: center;">
-    <h1 style="font-family: 'Montserrat', sans-serif; margin: 0;">Hello World</h1>
-</div> -->
-<img src="https://images.crunchbase.com/image/upload/c_pad,f_auto,q_auto:eco,dpr_1/05e9b2407d294b538fd9e646c143b588" 
-alt="Setel Logo" 
-class="setel-image">
 
 <!-- Main Content -->
-<!-- <div style="padding: 20px; text-align: center;">
-    <p style="font-size: 18px;">Welcome to a basic "Hello World" layout!</p>
-</div> -->
+<div class="content-container">
+  <div class="image-container">
+    <img src="https://images.crunchbase.com/image/upload/c_pad,f_auto,q_auto:eco,dpr_1/05e9b2407d294b538fd9e646c143b588" 
+    alt="Setel Logo" 
+    class="setel-image">
+  </div>
 
+  <div class="text-container">
+      <div class="headline-text">Refuel and Shop with Setel</div>
+      <div class="subheadline-text">
+          Enjoy a seamless refuel &#x26; retail-on-the-go experience. #WeSetelForYou
+      </div>
+  </div>
 
-<!-- <div class="center-container">
-    <div class="dropdown">
-        <button class="dropbtn" id="vehicle-type">Vehicle Type</button>
-        <div class="dropdown-content">
-            <button class="dropdown-item" data-type="Sedan">Sedan</button>
-            <button class="dropdown-item" data-type="Motorcycle">Motorcycle</button>
-            <button class="dropdown-item" data-type="Hatchback">Hatchback</button>
-            <button class="dropdown-item" data-type="Heavy Duty Vehicles">Heavy Duty Vehicles</button>
-            <button class="dropdown-item" data-type="SUV">SUV</button>
-        </div>
-    </div>
+  <div class="new-image-container">
+    <img 
+      src="https://www.setel.com/wp-content/uploads/2023/11/Frame-289688.png" 
+      alt="New Setel Image" 
+      class="new-setel-image">
+  </div>
 
+</div>
 
-    <div class="textbox">
-        <input type="text" id="start-location" placeholder="Enter a Starting Location">
-        <button id="send-start-location">Enter</button>
-        <input type="text" id="end-location" placeholder="Enter a Destination">
-        <button id="send-end-location">Enter</button>
-        <button id="current-loc-button">Current Location</button>
-    </div>
-</div> -->
 
 <nav class="navigation">
     <ul class="navigation-list">

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>5elesai</title>
     <!-- <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/pure-min.css"> -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='transport.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,31 +18,100 @@
 
 <!-- Main Content -->
 
-<div class="center-container">
-  <div class="dropdown">
-      <button class="dropbtn" id="vehicle-type">Vehicle Type</button>
+<div class="content-container">
+  <div class="image-container">
+    <img src="https://images.crunchbase.com/image/upload/c_pad,f_auto,q_auto:eco,dpr_1/05e9b2407d294b538fd9e646c143b588" 
+    alt="Setel Logo" 
+    class="setel-image">
+  </div>
+
+  <div class="center-container">
+    <div class="dropdown">
+      <button class="dropbtn" id="vehicle-type">
+        <svg
+          width="24"
+          height="24"
+          viewBox="0 0 44 44"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M0.5 22C0.5 10.1259 10.1259 0.5 22 0.5C33.8741 0.5 43.5 10.1259 43.5 22C43.5 33.8741 33.8741 43.5 22 43.5C10.1259 43.5 0.5 33.8741 0.5 22Z"
+            fill="#2C2C2C"
+          ></path>
+          <path
+            d="M0.5 22C0.5 10.1259 10.1259 0.5 22 0.5C33.8741 0.5 43.5 10.1259 43.5 22C43.5 33.8741 33.8741 43.5 22 43.5C10.1259 43.5 0.5 33.8741 0.5 22Z"
+            stroke="#2C2C2C"
+            stroke-linecap="round"
+          ></path>
+          <path
+            d="M15.3333 24.0833V22.1423C15.3333 21.1993 16.0794 20.435 16.9999 20.435M15.3333 24.0833C15.3333 25.0263 16.0794 25.7906 16.9999 25.7906H26.9999C27.9204 25.7906 28.6666 25.0263 28.6666 24.0833M15.3333 24.0833V26.6951C15.3333 27.3237 15.8307 27.8333 16.4444 27.8333H17.5555C18.1691 27.8333 18.6666 27.3237 18.6666 26.6951V25.7906M28.6666 24.0833V22.1423C28.6666 21.1993 27.9204 20.435 26.9999 20.435H16.9999M28.6666 24.0833V26.6951C28.6666 27.3237 28.1691 27.8333 27.5555 27.8333H26.4444C25.8307 27.8333 25.3333 27.3237 25.3333 26.6951V25.7906M16.9999 20.435L17.8911 17.0116C18.0208 16.5133 18.4613 16.1667 18.9647 16.1667H25.088C25.5662 16.1667 25.9908 16.4802 26.1421 16.9449L27.2777 20.435M17.2777 22.9959H19.2221M24.7777 22.9959H26.7221"
+            stroke="#F5F5F5"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          ></path>
+        </svg>
+      </button>
       <div class="dropdown-content">
-          <button class="dropdown-item" data-type="Sedan">Sedan</button>
-          <button class="dropdown-item" data-type="Motorcycle">Motorcycle</button>
-          <button class="dropdown-item" data-type="Hatchback">Hatchback</button>
-          <button class="dropdown-item" data-type="Heavy Duty Vehicles">Heavy Duty Vehicles</button>
-          <button class="dropdown-item" data-type="SUV">SUV</button>
-      </div>
-  </div>
+        <button class="dropdown-item" data-type="Sedan">Sedan</button>
+        <button class="dropdown-item" data-type="Motorcycle">Motorcycle</button>
+        <button class="dropdown-item" data-type="Hatchback">Hatchback</button>
+        <button class="dropdown-item" data-type="Heavy Duty Vehicles">Heavy Duty Vehicles</button>
+        <button class="dropdown-item" data-type="SUV">SUV</button>
+      </div>    
+    </div>
+  
+  
+    <div class="textbox">
+        <input type="text" id="start-location" placeholder="Enter a Starting Location">
+        <button id="send-start-location">Enter</button>
+        <input type="text" id="end-location" placeholder="Enter a Destination">
+        <button id="send-end-location">Enter</button>
+        <button id="current-loc-button">Current Location</button>
+    </div>
 
 
-  <div class="textbox">
-      <input type="text" id="start-location" placeholder="Enter a Starting Location">
-      <button id="send-start-location">Enter</button>
-      <input type="text" id="end-location" placeholder="Enter a Destination">
-      <button id="send-end-location">Enter</button>
-      <button id="current-loc-button">Current Location</button>
+    <div id="voice-button-container">
+      <button id="voice-button" class="hold-to-speak">
+        <svg
+          width="60"
+          height="60"
+          viewBox="0 0 80 80"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M0.5 32C0.5 14.603 14.603 0.5 32 0.5H48C65.397 0.5 79.5 14.603 79.5 32V48C79.5 65.397 65.397 79.5 48 79.5H32C14.603 79.5 0.5 65.397 0.5 48V32Z"
+            fill="#2C2C2C"
+          ></path>
+          <path
+            d="M0.5 32C0.5 14.603 14.603 0.5 32 0.5H48C65.397 0.5 79.5 14.603 79.5 32V48C79.5 65.397 65.397 79.5 48 79.5H32C14.603 79.5 0.5 65.397 0.5 48V32Z"
+            stroke="#2C2C2C"
+            stroke-linecap="round"
+          ></path>
+          <path
+            d="M56.3333 35.3333V40C56.3333 44.3319 54.6125 48.4863 51.5494 51.5494C48.4863 54.6125 44.3318 56.3333 40 56.3333M40 56.3333C35.6681 56.3333 31.5136 54.6125 28.4505 51.5494C25.3875 48.4863 23.6666 44.3319 23.6666 40V35.3333M40 56.3333V65.6667M30.6666 65.6667H49.3333M40 14.3333C38.1434 14.3333 36.363 15.0708 35.0502 16.3836C33.7375 17.6963 33 19.4768 33 21.3333V40C33 41.8565 33.7375 43.637 35.0502 44.9498C36.363 46.2625 38.1434 47 40 47C41.8565 47 43.637 46.2625 44.9497 44.9498C46.2625 43.637 47 41.8565 47 40V21.3333C47 19.4768 46.2625 17.6963 44.9497 16.3836C43.637 15.0708 41.8565 14.3333 40 14.3333Z"
+            stroke="#F5F5F5"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          ></path>
+        </svg>
+      </button>
+      
+    </div>
+    
   </div>
+  
+  <div class="current_loc"></div>
+  
+  <div class="final_dest"></div>
+  
+
 </div>
 
-<div class="current_loc"></div>
 
-<div class="final_dest"></div>
 
 
 

@@ -1,182 +1,213 @@
-.headline
-{
-position:absolute;
-color:#1d1b20;
-text-align:left;
-vertical-align:text-middle;
-font-size:32px;
-font-family:Roboto;
-line-height:40px;
-border-style:hidden;
-outline:none;
-width:765px;
+/* Parent container to center the dropdown */
+.center-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full height of the viewport */
 }
 
-.passbalance:rm10
-{
-background-color:#ffffff;
-height:65px;
-width:227px;
-padding:0px;
-display:flex;
-flex-direction:row;
-justify-content:space-between;
-align-items:center;
-position:relative;
+/* Dropdown Button */
+.dropbtn {
+    background-color: #04AA6D;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
 }
 
-.button2
-{
-color:#ffffff;
-text-align:right;
-vertical-align:text-top;
-font-size:16px;
-font-family:Inter;
-align-self:flex-start;
-left:31.5px;
-top:13.5px;
-position:absolute;
-line-height:100px;
-border-style:hidden;
-outline:none;
-width:91px;
-display:flex;
+/* Dropdown styles */
+.dropdown {
+    position: relative;
+    display: inline-block;
 }
 
-.arrowupsquarecontained
-{
-background-color:#ffffff;
-height:172px;
-width:175px;
-transform:rotate(-90deg);
-padding:0px;
-border-style:hidden;
-outline:none;
-left:371px;
-top:241px;
-position:absolute;
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
 }
 
-.sun
-{
-background-color:#ffffff;
-height:134px;
-width:135px;
-padding:0px;
-border-style:hidden;
-outline:none;
-left:461px;
-top:260px;
-position:absolute;
+/* Style dropdown buttons like links */
+.dropdown-content button {
+    color: black;
+    background: none;
+    border: none;
+    padding: 12px 16px;
+    text-align: left;
+    width: 100%;
+    cursor: pointer;
+}
+
+.dropdown-content button:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #3e8e41;
 }
 
 
-.calendar
-{
-background-color:#ffffff;
-height:151px;
-width:184px;
-padding:0px;
-border-style:hidden;
-outline:none;
-left:677px;
-top:248px;
-position:absolute;
+body {
+    margin: 0; /* Remove default margins */
+    font-family: Arial, sans-serif; /* Optional: Set a clean font */
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center elements horizontally */
+    justify-content: flex-start; /* Align elements at the top */
+}
+
+.content-container {
+    text-align: center; /* Center-align content within the container */
+    margin-top: 20px; /* Space from the top of the page */
+}
+
+.image-container {
+    margin-bottom: 20px; /* Space below the image */
+}
+
+.setel-image {
+    width: 300px; /* Adjust image width */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.center-container {
+    margin-top: 20px; /* Space between the image and center container */
+    text-align: center; /* Center align content within the container */
+    display: flex;
+    flex-direction: column; /* Stack dropdown and textboxes vertically */
+    align-items: center; /* Center elements within the container */
+    gap: 15px; /* Add space between dropdown and textboxes */
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropbtn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    width: 60px;
+    height: 60px;
+  }
+  
+  .dropbtn svg {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  .dropdown-item {
+    background-color: #f9f9f9;
+    border: none;
+    padding: 8px 12px;
+    text-align: left;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  .dropdown-item:hover {
+    background-color: #e0e0e0;
+  }
+  
+
+.textbox {
+    display: flex;
+    flex-direction: column; /* Stack inputs and buttons vertically */
+    gap: 10px; /* Add space between inputs and buttons */
+}
+
+.textbox input {
+    width: 300px; /* Adjust input box width */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.textbox button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: #28a745;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.textbox button:hover {
+    background-color: #218838;
+}
+
+.textbox svg {
+    width: 40px; /* Set a larger size for the icon */
+    height: 40px;
+    transition: transform 0.3s ease;
+}
+
+.textbox svg:hover {
+    transform: scale(1.1); /* Optionally, add a hover effect for slight scaling */
 }
 
 
-.group16
-{
-width:192px;
-height:166px;
-position:absolute;
+
+#voice-button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+  }
+
+  #voice-button {
+    width: 120px; /* Increase button size */
+    height: 120px; /* Increase button size */
+    padding: 10px; /* Optional padding for better alignment */
+    border: none;
+    background-color: transparent; /* Transparent background */
+    position: relative; /* For positioning hold effect */
+    cursor: pointer;
 }
-
-
-.rectangle1
-{
-background-color:#d9d9d9;
-height:166px;
-width:192px;
-}
-
-.one-wayticketrm3
-{
-color:#000000;
-text-align:center;
-vertical-align:text-top;
-font-size:16px;
-font-family:Inter;
-line-height:100px;
-border-style:hidden;
-outline:none;
-width:137px;
-}
-
-.button
-{
-background-color:#2c2c2c;
-height:37.094970703125px;
-width:92px;
-border-radius:8px;
-padding:12px;
-display:flex;
-flex-direction:row;
-justify-content:center;
-align-items:center;
-gap:8px;
-position:relative;
-}
-
-
-.group6
-{
-width:192px;
-height:166px;
-position:absolute;
-}
-
-.group11
-{
-width:657px;
-height:25px;
-}
-
-.bestfor1-waytrips
-{
-color:#000000;
-text-align:center;
-vertical-align:text-top;
-font-size:16px;
-font-family:Inter;
-line-height:100px;
-border-style:hidden;
-outline:none;
-width:174px;
-}
-
-.bestforfrequenttrips
-{
-color:#000000;
-text-align:center;
-vertical-align:text-top;
-font-size:16px;
-font-family:Inter;
-line-height:100px;
-border-style:hidden;
-outline:none;
-width:174px;
-}
-
-.bestfor2-waytrips
-{
-color:#000000;
-text-align:center;
-vertical-align:text-top;
-font-size:16px;
-font-family:Inter;
-line-height:100px;
-border-style:hidden;
-outline:none;
-width:174px;
-}
+  
+  .hold-to-speak {
+    background-color: transparent;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  .hold-to-speak svg {
+    width: 60px;
+    height: 60px;
+    transition: transform 0.3s ease;
+  }
+  
+  .hold-to-speak:active svg {
+    transform: scale(1.1);
+  }
+  
