@@ -1,143 +1,167 @@
-/* General Reset */
 body {
-    font-family: 'Inter', sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    background-color: #f5f5f5; /* Light background for better contrast */
+    margin: 0; /* Remove default margins */
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center horizontally */
+    justify-content: flex-start; /* Align elements at the top of the page */
+    font-family: Arial, sans-serif; /* Optional: Set a clean font */
+  }
+  
+  .content-container {
+    text-align: center; /* Center align all content */
+    margin-top: 20px; /* Space from the top of the page */
+  }
+  
+  .image-container {
+    margin-bottom: 150px; /* Add space between the image and the text */
+  }
+  
+  .text-container {
+    margin-top: 0; /* Reset margin (managed by .image-container) */
+    text-align: left;
+  }
+  
+  .headline-text {
+    font-size: 48px; /* Larger font for the headline */
+    font-weight: bold; /* Bold text */
+    margin-bottom: 5px; /* Space below the headline */
+  }
+  
+  .subheadline-text {
+    font-size: 16px; /* Font size for the subheadline */
+    color: #555; /* Softer color for better contrast */
+  }
+  
+
+/* General Layout for Main Container */
+.main-content-container {
+    display: flex;
+    justify-content: space-between; /* Space out the two sections */
+    gap: 2rem; /* Adds space between the left and right sections */
+    flex-direction: column; /* Stack the transport sections vertically */
+    height: 100vh; /* Full height of the viewport */
+    padding: 2rem;
+    box-sizing: border-box; /* Ensure padding doesn't overflow */
 }
 
-/* Section Headings */
-h1, h2, .supporting-text {
-    color: #1E1E1E;
-    font-family: 'Roboto', sans-serif;
-    font-size: 18px;
-    margin: 16px 0;
+.transport-container {
+    display: flex;
+    justify-content: space-between; /* Align sections horizontally */
+    flex-grow: 1; /* Allow the transport sections to take available space */
+    gap: 2rem; /* Space between the left and right sections */
+}
+
+.private-transport, .public-transport {
+    width: 48%; /* Adjusts the width of the transport sections */
+}
+
+h1 {
     text-align: center;
-}
-
-/* Image Styling */
-.image {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 16px auto;
+    font-size: 1.8rem;
+    color: #333;
 }
 
 /* Private Transport Card */
 .private-transport-card {
-    width: 240px;
-    background: white;
-    border: 1px solid #D9D9D9;
+    background-color: #f0f0f0; /* Light background for the card */
+    padding: 1rem;
     border-radius: 8px;
-    padding: 12px 16px;
-    margin: 16px auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    gap: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 1rem;
 }
 
 .private-transport-card span {
-    color: #1E1E1E;
-    font-size: 16px;
-    line-height: 22.4px;
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    color: #555;
 }
 
-.private-transport-card span:first-child {
-    font-weight: 600;
+.dot {
+    width: 10px;
+    height: 10px;
+    background-color: #ccc;
+    border-radius: 50%;
+    margin-top: 1rem;
 }
 
 /* Button Styling */
 .button {
-    width: 240px;
-    margin: 16px auto;
+    margin-top: 1.5rem;
 }
 
 .state-layer {
-    background: #007AFF;
-    color: white;
-    padding: 10px 20px;
+    background-color: #007bff;
+    padding: 0.5rem;
+    border-radius: 8px;
     text-align: center;
-    border-radius: 100px;
-    font-size: 14px;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 500;
-    letter-spacing: 0.1px;
-    cursor: pointer;
 }
 
-.state-layer:hover {
-    background: #005BBB;
-}
-
-/* Public Transport Card */
-.public-transport-card {
-    width: 191px;
-    height: 175px;
-    border: 1px solid black;
-    border-radius: 28px;
-    overflow: hidden;
-    margin: 16px auto;
-    background-image: url(https://via.placeholder.com/191x175);
-    background-size: cover;
-    background-position: center;
-    position: relative;
-}
-
-.public-transport-card img {
-    width: 132px;
-    height: 33px;
-    border-radius: 28px;
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
+.label-text {
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
 }
 
 /* Public Transport Details */
 .public-transport-details {
-    width: 240px;
-    background: white;
-    border: 1px solid #D9D9D9;
+    margin-top: 1rem;
+    padding: 1rem;
+    background-color: #f0f0f0;
     border-radius: 8px;
-    padding: 12px 16px;
-    margin: 16px auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    gap: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .public-transport-details span {
-    color: #1E1E1E;
-    font-size: 16px;
-    line-height: 22.4px;
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    color: #555;
 }
 
-.public-transport-details span:first-child {
-    font-weight: 600;
-}
-
-/* Supporting Text */
+/* Supporting Text Styling */
 .supporting-text {
-    font-size: 12px;
-    color: #6c757d;
-    margin: 8px auto;
-    max-width: 240px;
+    text-align: center;
+    margin-top: auto; /* Push the text to the bottom */
+    font-size: 0.9rem;
+    color: #888;
+}
+
+/* Image Styling */
+.transport-img {
+    width: 100%;
+    max-width: 300px; /* Standardize the maximum width for images */
+    height: 200px; /* Set a consistent height for all images */
+    object-fit: cover; /* Ensures the image covers the area without distortion */
+    display: block;
+    margin: 1rem auto;
+}
+
+/* Button Styling */
+.button {
+    margin-top: 1.5rem;
+}
+
+.state-layer {
+    background-color: #007bff;
+    padding: 0.5rem;
+    border-radius: 8px;
     text-align: center;
 }
 
-/* General Styles for Cards */
-.card {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.label-text {
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    text-decoration: none; /* Removes underline for links */
+    display: inline-block; /* Ensures proper alignment inside the button */
 }
 
-.card .dot {
-    width: 6.63px;
-    height: 6.63px;
-    border: 1px solid #B3B3B3;
-    border-radius: 50%;
+.label-text:hover {
+    background-color: #0056b3; /* Slightly darker blue on hover */
+    border-radius: 8px;
+    padding: 0.5rem;
 }
+
+  

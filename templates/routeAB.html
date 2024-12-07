@@ -6,13 +6,85 @@
     <title>5elesai</title>
     <!-- <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/pure-min.css"> -->
     <link rel="stylesheet" href="{{ url_for('static', filename='routeAB.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
 
+
+<!-- Header -->
+
+
+<div class="content-container">
+  <div class="image-container">
+    <img src="https://images.crunchbase.com/image/upload/c_pad,f_auto,q_auto:eco,dpr_1/05e9b2407d294b538fd9e646c143b588" 
+    alt="Setel Logo" 
+    class="setel-image">
+  </div>
+
+  <div class="text-container">
+      <div class="headline-text">Travel Smart, Save Big</div>
+        <div class="subheadline-text">
+          A breakdown of your different route recommendations and their cost.
+          #WeSetelForYou     
+   </div>
+  </div>
+
+  <div class="main-content-container">
+    <div class="transport-container">
+      <!-- Private Transport Section -->
+      <div class="private-transport">
+          <h1>Private Transport</h1>
+          <img class="transport-img" src="https://media.istockphoto.com/id/1255561340/vector/vector-illustration-of-a-red-car-moving-along-the-ocean-mountain-road.jpg?s=612x612&w=0&k=20&c=6QLwnhwHlTn4LKgBpFwN7iBa1ZgXGELMWveUihXC9M8=" alt="Private Transport Image">
+
+          <div class="button">
+            <div class="state-layer">
+              <a href="#private-transport" class="label-text">A. Private Transport</a>
+            </div>
+          </div>
+
+          <div class="private-transport-card">
+              <span>Total Cost: RM 15</span>
+              <span>Fuel: RM 2<br>Toll: RM <br>Parking: RM<br>Time: 30 minutes</span>
+              <div class="dot"></div>
+          </div>
+
+      </div>
+
+      <!-- Public Transport Section -->
+      <div class="public-transport">
+          <h1>Public Transport</h1>
+          <div class="public-transport-card">
+              <img class="transport-img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLGF0oaXSzJK6VhtdEchKNbxCyInU2zbPN0A&s" alt="Public Transport Logo">
+          </div>
+          <div class="button">
+              <div class="state-layer">
+                <a href="#public-transport" class="label-text">B. Public Transport</a>
+              </div>
+          </div>
+          
+          <div class="public-transport-details">
+              <span>Total Cost: RM 6</span>
+              <span>Daily Travel Pass: RM 6</span>
+          </div>
+      </div>
+  </div>
+
+  <div class="supporting-text">
+      *Costs are estimates based on statistical data and may vary due to real-time factors.
+  </div>
+
+  </div>
+
+</div>
+
+
 <!-- Main Content -->
+
+
+
 <nav class="navigation">
   <ul class="navigation-list">
     <!-- Home Section -->
@@ -265,66 +337,12 @@
 </nav>
   
 
-<div class="current_loc"></div>
-
-<div class="final_dest"></div>
 
 <script src="https://cdn.socket.io/4.8.1/socket.io.min.js"></script> <!-- Add Socket.IO client library -->
 <script src="{{ url_for('static', filename='scripts.js') }}"></script> <!-- Link to the external JavaScript file -->
-<div class="header">
-  <div class="text-column">
-    <div class="headline-supporting-text">
-      <div class="headline">Travel Smart, Save Big.</div>
-      <div class="supporting-text">
-        A breakdown of your different route recommendations and their cost.
-        #WeSetelForYou
-      </div>
-    </div>
-  </div>
-</div>
+<script src="{{ url_for('static', filename='scripts_routeAB.js') }}"></script> <!-- Link to the external JavaScript file -->
 
-<div class="transport-container">
-        <!-- Private Transport Section -->
-        <div class="private-transport">
-            <h1>Private Transport</h1>
-            <img class="image" src="image.png" alt="Private Transport Image">
-            <div class="private-transport-card">
-                <span>Total Cost: RM 15</span>
-                <span>Fuel: RM 2<br>Toll: RM <br>Parking: RM<br>Time: 30 minutes</span>
-                <div class="dot"></div>
-            </div>
-            <div class="button">
-                <div class="state-layer">
-                    <div class="label-text">A. Private Transport</div>
-                </div>
-            </div>
-        </div>
 
-        <!-- Public Transport Section -->
-        <div class="public-transport">
-            <h1>Public Transport</h1>
-            <div class="public-transport-card">
-                <img src="https://via.placeholder.com/132x33" alt="Public Transport Logo">
-            </div>
-            <div class="button">
-                <div class="state-layer">
-                    <div class="label-text">B. Public Transport</div>
-                </div>
-            </div>
-            <div class="public-transport-details">
-                <span>Total Cost: RM 6</span>
-                <span>Daily Travel Pass: RM 6</span>
-            </div>
-        </div>
-    </div>
-
-    <div class="supporting-text">
-        *Costs are estimates based on statistical data and may vary due to real-time factors.
-    </div>
-
-<div class="supporting-text">
-    *Costs are estimates based on statistical data and may vary due to real-time factors.
-</div>
 
 </body>
 </html>
