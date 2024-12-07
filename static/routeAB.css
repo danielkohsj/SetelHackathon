@@ -1,182 +1,143 @@
-.headline
-{
-position:absolute;
-color:#1d1b20;
-text-align:left;
-vertical-align:text-middle;
-font-size:32px;
-font-family:Roboto;
-line-height:40px;
-border-style:hidden;
-outline:none;
-width:765px;
+/* General Reset */
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f5f5f5; /* Light background for better contrast */
 }
 
-.passbalance:rm10
-{
-background-color:#ffffff;
-height:65px;
-width:227px;
-padding:0px;
-display:flex;
-flex-direction:row;
-justify-content:space-between;
-align-items:center;
-position:relative;
+/* Section Headings */
+h1, h2, .supporting-text {
+    color: #1E1E1E;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    margin: 16px 0;
+    text-align: center;
 }
 
-.button2
-{
-color:#ffffff;
-text-align:right;
-vertical-align:text-top;
-font-size:16px;
-font-family:Inter;
-align-self:flex-start;
-left:31.5px;
-top:13.5px;
-position:absolute;
-line-height:100px;
-border-style:hidden;
-outline:none;
-width:91px;
-display:flex;
+/* Image Styling */
+.image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 16px auto;
 }
 
-.arrowupsquarecontained
-{
-background-color:#ffffff;
-height:172px;
-width:175px;
-transform:rotate(-90deg);
-padding:0px;
-border-style:hidden;
-outline:none;
-left:371px;
-top:241px;
-position:absolute;
+/* Private Transport Card */
+.private-transport-card {
+    width: 240px;
+    background: white;
+    border: 1px solid #D9D9D9;
+    border-radius: 8px;
+    padding: 12px 16px;
+    margin: 16px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 8px;
 }
 
-.sun
-{
-background-color:#ffffff;
-height:134px;
-width:135px;
-padding:0px;
-border-style:hidden;
-outline:none;
-left:461px;
-top:260px;
-position:absolute;
+.private-transport-card span {
+    color: #1E1E1E;
+    font-size: 16px;
+    line-height: 22.4px;
 }
 
-
-.calendar
-{
-background-color:#ffffff;
-height:151px;
-width:184px;
-padding:0px;
-border-style:hidden;
-outline:none;
-left:677px;
-top:248px;
-position:absolute;
+.private-transport-card span:first-child {
+    font-weight: 600;
 }
 
-
-.group16
-{
-width:192px;
-height:166px;
-position:absolute;
+/* Button Styling */
+.button {
+    width: 240px;
+    margin: 16px auto;
 }
 
-
-.rectangle1
-{
-background-color:#d9d9d9;
-height:166px;
-width:192px;
+.state-layer {
+    background: #007AFF;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    border-radius: 100px;
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    letter-spacing: 0.1px;
+    cursor: pointer;
 }
 
-.one-wayticketrm3
-{
-color:#000000;
-text-align:center;
-vertical-align:text-top;
-font-size:16px;
-font-family:Inter;
-line-height:100px;
-border-style:hidden;
-outline:none;
-width:137px;
+.state-layer:hover {
+    background: #005BBB;
 }
 
-.button
-{
-background-color:#2c2c2c;
-height:37.094970703125px;
-width:92px;
-border-radius:8px;
-padding:12px;
-display:flex;
-flex-direction:row;
-justify-content:center;
-align-items:center;
-gap:8px;
-position:relative;
+/* Public Transport Card */
+.public-transport-card {
+    width: 191px;
+    height: 175px;
+    border: 1px solid black;
+    border-radius: 28px;
+    overflow: hidden;
+    margin: 16px auto;
+    background-image: url(https://via.placeholder.com/191x175);
+    background-size: cover;
+    background-position: center;
+    position: relative;
 }
 
-
-.group6
-{
-width:192px;
-height:166px;
-position:absolute;
+.public-transport-card img {
+    width: 132px;
+    height: 33px;
+    border-radius: 28px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
-.group11
-{
-width:657px;
-height:25px;
+/* Public Transport Details */
+.public-transport-details {
+    width: 240px;
+    background: white;
+    border: 1px solid #D9D9D9;
+    border-radius: 8px;
+    padding: 12px 16px;
+    margin: 16px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 8px;
 }
 
-.bestfor1-waytrips
-{
-color:#000000;
-text-align:center;
-vertical-align:text-top;
-font-size:16px;
-font-family:Inter;
-line-height:100px;
-border-style:hidden;
-outline:none;
-width:174px;
+.public-transport-details span {
+    color: #1E1E1E;
+    font-size: 16px;
+    line-height: 22.4px;
 }
 
-.bestforfrequenttrips
-{
-color:#000000;
-text-align:center;
-vertical-align:text-top;
-font-size:16px;
-font-family:Inter;
-line-height:100px;
-border-style:hidden;
-outline:none;
-width:174px;
+.public-transport-details span:first-child {
+    font-weight: 600;
 }
 
-.bestfor2-waytrips
-{
-color:#000000;
-text-align:center;
-vertical-align:text-top;
-font-size:16px;
-font-family:Inter;
-line-height:100px;
-border-style:hidden;
-outline:none;
-width:174px;
+/* Supporting Text */
+.supporting-text {
+    font-size: 12px;
+    color: #6c757d;
+    margin: 8px auto;
+    max-width: 240px;
+    text-align: center;
+}
+
+/* General Styles for Cards */
+.card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card .dot {
+    width: 6.63px;
+    height: 6.63px;
+    border: 1px solid #B3B3B3;
+    border-radius: 50%;
 }
