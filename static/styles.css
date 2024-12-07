@@ -109,3 +109,12 @@
   overflow: hidden; /* Optional: Hide overflow text */
   text-overflow: ellipsis; /* Optional: Add "..." for overflow text */
 }
+
+.setel-image {
+  width: 300px; /* Change the width */
+  height: auto; /* Maintain aspect ratio */
+  position: absolute; /* Position it relative to the page */
+  top: 50px; /* Distance from the top of the page */
+  left: 100px; /* Distance from the left of the page */
+  border: 2px solid #000; /* Optional: Add a border */
+}
