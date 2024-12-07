@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>5elesai</title>
     <!-- <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/pure-min.css"> -->
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='balance.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
@@ -271,65 +271,51 @@
     </li>
 </nav>
 
-<div class="heading-text">Public Transport made Simple.</div>
+<div class="content-container">
+  <!-- Heading -->
+  <div class="heading-text">Public Transport made Simple.</div>
 
-<div class="ewallet-balance-container">
-  <div class="ewallet-balance">E-Wallet Balance: RM 10.50</div>
-</div>
-
-<div class="reload-button">
-  <div class="reload-text">Reload Now</div>
-</div>
-
-
-<div style="width: 22px; height: 22px; padding: 1.83px; justify-content: center; align-items: center; display: inline-flex">
-  <div style="width: 18.33px; height: 18.33px; border: 4px white solid"></div>
-</div>
-
-<div style="width: 175px; height: 172px; padding-top: 21.50px; padding-bottom: 21.50px; padding-left: 21.88px; padding-right: 21.87px; transform: rotate(90deg); transform-origin: 0 0; justify-content: center; align-items: center; display: inline-flex">
-  <div style="width: 131.25px; height: 129px; border: 2px black solid"></div>
-</div>
-
-<div style="width: 135px; height: 134px; padding-left: 5.62px; padding-right: 5.62px; padding-top: 5.58px; padding-bottom: 5.58px; justify-content: center; align-items: center; display: inline-flex">
-  <div style="width: 123.75px; height: 122.83px; border: 4px #1E1E1E solid"></div>
-</div>
-
-<div style="width: 184px; height: 151px; padding-left: 23px; padding-right: 23px; padding-top: 12.58px; padding-bottom: 12.58px; justify-content: center; align-items: center; display: inline-flex">
-  <div style="width: 138px; height: 125.83px; border: 4px #1E1E1E solid"></div>
-</div>
-
-<div style="width: 192px; height: 166px; position: relative">
-  <div style="width: 192px; height: 166px; left: 0px; top: 0px; position: absolute; background: #D9D9D9"></div>
-  <div style="width: 102px; height: 44.51px; left: 45px; top: 23.18px; position: absolute; text-align: center; color: black; font-size: 16px; font-family: Inter; font-weight: 400; line-height: 16px; word-wrap: break-word">Monthly Pass<br/><br/>RM 50.00</div>
-  <div style="width: 92px; height: 37.09px; padding: 12px; left: 50px; top: 83px; position: absolute; background: #2C2C2C; border-radius: 8px; overflow: hidden; border: 1px #2C2C2C solid; justify-content: center; align-items: center; gap: 8px; display: inline-flex">
-    <div style="color: #F5F5F5; font-size: 16px; font-family: Inter; font-weight: 400; line-height: 16px; word-wrap: break-word">Buy Now</div>
+  <!-- E-Wallet and Reload Button -->
+  <div class="group19">
+    <div class="ewallet-balance-container">
+      <div class="ewallet-balance">E-Wallet Balance: RM 10.50</div>
+    </div>
+    <div class="reload-button">Reload Now</div>
   </div>
-</div>
 
-<div style="width: 192px; height: 166px; position: relative">
-  <div style="width: 192px; height: 166px; left: 0px; top: 0px; position: absolute; background: #007AFF"></div>
-  <div style="width: 78px; height: 44.51px; left: 57px; top: 23.18px; position: absolute; text-align: center; color: white; font-size: 16px; font-family: Inter; font-weight: 400; line-height: 16px; word-wrap: break-word">Daily Pass<br/><br/>RM 6.00</div>
-</div>
-
-<div style="width: 92px; height: 37.09px; padding: 12px; background: #2C2C2C; border-radius: 8px; overflow: hidden; border: 1px #2C2C2C solid; justify-content: center; align-items: center; gap: 8px; display: inline-flex">
-  <div style="color: #F5F5F5; font-size: 16px; font-family: Inter; font-weight: 400; line-height: 16px; word-wrap: break-word">Buy Now</div>
-</div>
-
-<div style="width: 192px; height: 166px; position: relative">
-  <div style="width: 192px; height: 166px; left: 0px; top: 0px; position: absolute; background: #D9D9D9"></div>
-  <div style="width: 92px; height: 37.09px; padding: 12px; left: 53px; top: 83px; position: absolute; background: #2C2C2C; border-radius: 8px; overflow: hidden; border: 1px #2C2C2C solid; justify-content: center; align-items: center; gap: 8px; display: inline-flex">
-    <div style="color: #F5F5F5; font-size: 16px; font-family: Inter; font-weight: 400; line-height: 16px; word-wrap: break-word">Buy Now</div>
+  <!-- Ticket Options -->
+  <div class="ticket-options">
+    <div class="ticket-card">
+      <div class="ticket-info">
+        Monthly Pass<br />RM 50.00
+      </div>
+      <button class="buy-now">Buy Now</button>
+    </div>
+    <div class="ticket-card" style="background: #007AFF; color: white;">
+      <div class="ticket-info">
+        Daily Pass<br />RM 6.00
+      </div>
+      <button class="buy-now">Buy Now</button>
+    </div>
+    <div class="ticket-card">
+      <div class="ticket-info">
+        One-Way Ticket<br />RM 3.40
+      </div>
+      <button class="buy-now">Buy Now</button>
+    </div>
   </div>
-  <div style="width: 137px; height: 51.75px; left: 27px; top: 20px; position: absolute; text-align: center; color: black; font-size: 16px; font-family: Inter; font-weight: 400; line-height: 16px; word-wrap: break-word">One-Way Ticket<br/><br/>RM 3.40</div>
+
+  <!-- Trip Descriptions -->
+  <div class="trip-descriptions">
+    <div>Best for 1-way trips.</div>
+    <div>Best for 2-way trips.</div>
+    <div>Best for frequent trips.</div>
+  </div>
+
+  <!-- Star Badge -->
+  <img class="star-badge" src="star-badge.svg" alt="Star Badge" />
 </div>
 
-<div style="width: 657px; height: 25px; position: relative">
-  <div style="width: 174px; height: 25px; left: 0px; top: 0px; position: absolute; text-align: center; color: black; font-size: 16px; font-family: Inter; font-weight: 400; line-height: 16px; word-wrap: break-word">Best for 1-way trips.</div>
-  <div style="width: 174px; height: 25px; left: 483px; top: 0px; position: absolute; text-align: center; color: black; font-size: 16px; font-family: Inter; font-weight: 400; line-height: 16px; word-wrap: break-word">Best for frequent trips.</div>
-  <div style="width: 174px; height: 25px; left: 244px; top: 0px; position: absolute; text-align: center; color: black; font-size: 16px; font-family: Inter; font-weight: 400; line-height: 16px; word-wrap: break-word">Best for 2-way trips.                     </div>
-</div>
-
-<img class="star-badge" src="star-badge.svg" />
 
 
 <div class="current_loc"></div>
